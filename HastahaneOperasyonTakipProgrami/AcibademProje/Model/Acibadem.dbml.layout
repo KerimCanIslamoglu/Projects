@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 15.75" name="Acibadem">
+  <DataContextMoniker Name="/AcibademDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9075b58b-37d1-420f-89ad-a04d6dc325bf" absoluteBounds="6.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/AcibademDataContext/tblAltGrup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0bf82de-f91a-4a27-9f06-4856bd23c420" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a0e637e-b7f6-452a-a8ab-b63c41ddc3dd" absoluteBounds="3.5, 4.375, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/AcibademDataContext/tblTakipVerileri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1f3661f-93f7-4a92-8d1e-fb59436672df" absoluteBounds="3.515, 4.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1259ff7a-89bd-4594-a9e4-515a2a15d895" absoluteBounds="6.75, 2.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/AcibademDataContext/tblDemografik" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42b51a7c-f023-42de-bdca-1c8d81571c9a" absoluteBounds="6.765, 3.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1806ffe4-5936-4eaa-be21-3e25ca33ff86" absoluteBounds="6.75, 7.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/AcibademDataContext/tblDrListesi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79439eaa-7b1a-4336-8af7-1329a31ca3a9" absoluteBounds="6.765, 8.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02d0a91c-16d1-4fba-8ea0-aaa04525dbfb" absoluteBounds="0.75, 7.25, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/AcibademDataContext/tblHastaBilgileri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9e2e06b-eccc-4ceb-99f3-39483c84e06c" absoluteBounds="0.765, 7.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ff71cb7-c663-4520-a817-f73364ae03ac" absoluteBounds="9.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/AcibademDataContext/tblKOMorbidite" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9daf3ce1-3c2b-4aa0-9bdf-e0f3ed7da49a" absoluteBounds="9.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b800e3e-dc0f-43f9-a668-3ab4030023a2" absoluteBounds="9.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/AcibademDataContext/tblOperasyonTuru" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b240d34f-70ed-4271-aa05-b2ac12b36539" absoluteBounds="9.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c434eec1-4401-4bdb-ada1-6dc5729d53b9" absoluteBounds="3.5, 7.5, 2, 3.1170068359375014">
+      <DataClassMoniker Name="/AcibademDataContext/tblOperatifOzellikler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47b6badd-b09d-4cd3-b0c4-ba61a414660c" absoluteBounds="3.515, 7.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a58c4c41-025a-401a-9844-7800f8a58170" absoluteBounds="9.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/AcibademDataContext/tblPatoloji" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6ae7049-1ea9-4c44-ba77-b761162a3b98" absoluteBounds="9.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d04786d2-d8ad-4481-81db-c536d6a26b60" absoluteBounds="3.5, 1.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AcibademDataContext/tblPatolojikVeriler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3897f60c-3818-4028-9df3-6363daec2e50" absoluteBounds="3.515, 1.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="51bdeee3-cf43-483e-bf62-32ba3e2d8642" absoluteBounds="3.5, 11.375, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/AcibademDataContext/tblPosOperatifOzellikleri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6615f4a-7d74-4341-8b82-64a40cf27735" absoluteBounds="3.515, 11.835, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 7.25); (1.75 : 5.54890055338542); (2.19791916666667 : 5.54890055338542 : JumpStart); (2.36458583333333 : 5.54890055338542 : JumpEnd); (3.5 : 5.54890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AcibademDataContext/tblHastaBilgileri/tblHastaBilgileri_tblTakipVerileri" />
+      <nodes>
+        <classShapeMoniker Id="02d0a91c-16d1-4fba-8ea0-aaa04525dbfb" />
+        <classShapeMoniker Id="4a0e637e-b7f6-452a-a8ab-b63c41ddc3dd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.64505126953125); (3.5 : 8.64505126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AcibademDataContext/tblHastaBilgileri/tblHastaBilgileri_tblOperatifOzellikler" />
+      <nodes>
+        <classShapeMoniker Id="02d0a91c-16d1-4fba-8ea0-aaa04525dbfb" />
+        <classShapeMoniker Id="c434eec1-4401-4bdb-ada1-6dc5729d53b9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 7.25); (2.2812525 : 2.57774983723958); (3.5 : 2.57774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AcibademDataContext/tblHastaBilgileri/tblHastaBilgileri_tblPatolojikVeriler" />
+      <nodes>
+        <classShapeMoniker Id="02d0a91c-16d1-4fba-8ea0-aaa04525dbfb" />
+        <classShapeMoniker Id="d04786d2-d8ad-4481-81db-c536d6a26b60" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 9.7901025390625); (1.75 : 13.4142569986979); (3.5 : 13.4142569986979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AcibademDataContext/tblHastaBilgileri/tblHastaBilgileri_tblPosOperatifOzellikleri" />
+      <nodes>
+        <classShapeMoniker Id="02d0a91c-16d1-4fba-8ea0-aaa04525dbfb" />
+        <classShapeMoniker Id="51bdeee3-cf43-483e-bf62-32ba3e2d8642" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

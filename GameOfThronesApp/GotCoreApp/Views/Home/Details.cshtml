@@ -1,0 +1,48 @@
+﻿@model GotCoreApp.Models.Bolumlers
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row no-gutter">
+                    <div class="col-md-4"><img src="@Model.Poster" alt="@Model.Title" class="card-img" /></div>
+                    <div class="col-md-8">
+                        <h5 class="card-title">
+                              @Model.Title
+                            @*<a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Id">@Model.Name</a>*@
+                        </h5>
+                        <p class="card-text"> <b>Year :</b> @Model.Year</p>
+                        <p class="card-text"> <b>Rated :</b> @Model.Rated</p>
+                        <p class="card-text"> <b>Released Date :</b> @Model.Released</p>
+                        <p class="card-text"> <b>Season:</b> @Model.Season</p>
+                        <p class="card-text"> <b>Episode  :</b> @Model.Episode</p>
+                        <p class="card-text"> <b>Description :</b> @Model.Plot</p>
+                        <p class="card-text"> <b>Runtime :</b> @Model.Runtime</p>
+                        <p class="card-text"> <b>Genre :</b> @Model.Genre</p>
+                        <p class="card-text"> <b>Director:</b> @Model.Director</p>
+                        <p class="card-text"> <b>Written by :</b> @Model.Writer</p>
+                        <p class="card-text"> <b>Actors :</b> @Model.Actors</p>
+                        <p class="card-text"> <b>Language :</b> @Model.Language</p>
+                        <p class="card-text"> <b>Country :</b> @Model.Country</p>
+                        <p class="card-text"> <b>Awards :</b> @Model.Awards</p>
+                        <p class="card-text"> <b>Metascore:</b> @Model.Metascore</p>
+                        <p class="card-text"> <b>Type :</b> @Model.Type</p>
+                        <p class="card-text"> <b>Imdb Id :</b> @Model.ImdbId</p>
+                        <p class="card-text"> <b>Imdb Votes :</b> @Model.ImdbVotes</p>
+                        <p class="card-text"> <b>Imdb Ratings :</b> @Model.ImdbRating</p>
+                        <p class="card-text"> <b>Serie Id :</b> @Model.SeriesId</p>
+                        <p class="card-text"> <b>Response :</b> @Model.Response</p>
+                      
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

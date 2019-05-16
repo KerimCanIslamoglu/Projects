@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AcibademProje" Class="AcibademDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=AcibademProje;Persist Security Info=True;User ID=sa" SettingsObjectName="AcibademProje.Properties.Settings" SettingsPropertyName="AcibademProjeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAltGrup" Member="tblAltGrups">
+    <Type Name="tblAltGrup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AltGrup" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTakipVerileri" Member="tblTakipVerileris">
+    <Type Name="tblTakipVerileri">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Postop3AyLokalNuks" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Postop3AyKreatin" Type="System.Decimal" DbType="Decimal(3,2)" CanBeNull="true" />
+      <Column Name="Postop6AyLokalNuks" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Postop6AyKreatin" Type="System.Decimal" DbType="Decimal(3,2)" CanBeNull="true" />
+      <Column Name="Postop12AyLokalNuks" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Postop12AyKreatin" Type="System.Decimal" DbType="Decimal(3,2)" CanBeNull="true" />
+      <Association Name="tblHastaBilgileri_tblTakipVerileri" Member="tblHastaBilgileri" ThisKey="HastaID" OtherKey="ID" Type="tblHastaBilgileri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDemografik" Member="tblDemografiks">
+    <Type Name="tblDemografik">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Yas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Boy(cm)]" Member="Boy_cm_" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="[Kilo(kg)]" Member="Kilo_kg_" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="BMI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ASA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DrAdi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CINS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Taraf" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Lokalizasyon" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Boyut" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KOMorbidite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblDrListesi" Member="tblDrListesis">
+    <Type Name="tblDrListesi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DrAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblHastaBilgileri" Member="tblHastaBilgileris">
+    <Type Name="tblHastaBilgileri">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaNO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HastaAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HastaSoyadi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProtokolNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OperasyonTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="OperasyonTuru" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="[TakipSuresi(Ay)]" Member="TakipSuresi_Ay_" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Anah" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblHastaBilgileri_tblTakipVerileri" Member="tblTakipVerileris" ThisKey="ID" OtherKey="HastaID" Type="tblTakipVerileri" />
+      <Association Name="tblHastaBilgileri_tblOperatifOzellikler" Member="tblOperatifOzelliklers" ThisKey="ID" OtherKey="HastaID" Type="tblOperatifOzellikler" />
+      <Association Name="tblHastaBilgileri_tblPatolojikVeriler" Member="tblPatolojikVerilers" ThisKey="ID" OtherKey="HastaID" Type="tblPatolojikVeriler" />
+      <Association Name="tblHastaBilgileri_tblPosOperatifOzellikleri" Member="tblPosOperatifOzellikleris" ThisKey="ID" OtherKey="HastaID" Type="tblPosOperatifOzellikleri" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblKOMorbidite" Member="tblKOMorbidites">
+    <Type Name="tblKOMorbidite">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[KO-Morbidite]" Member="KO_Morbidite" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblOperasyonTuru" Member="tblOperasyonTurus">
+    <Type Name="tblOperasyonTuru">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OperasyonTuru" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblOperatifOzellikler" Member="tblOperatifOzelliklers">
+    <Type Name="tblOperatifOzellikler">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PKSAciklama" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SIK" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="COOperasyon" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Iskemi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PortSayisi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="YardimYNT" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Sure" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Dren" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Kanama" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Piyes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tblHastaBilgileri_tblOperatifOzellikler" Member="tblHastaBilgileri" ThisKey="HastaID" OtherKey="ID" Type="tblHastaBilgileri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPatoloji" Member="tblPatolojis">
+    <Type Name="tblPatoloji">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Patoloji" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPatolojikVeriler" Member="tblPatolojikVerilers">
+    <Type Name="tblPatolojikVeriler">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Patoloji" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AltGrup" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FurhmanGrade" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PatolojikEvre" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CerrahiSinir" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="tblHastaBilgileri_tblPatolojikVeriler" Member="tblHastaBilgileri" ThisKey="HastaID" OtherKey="ID" Type="tblHastaBilgileri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPosOperatifOzellikleri" Member="tblPosOperatifOzellikleris">
+    <Type Name="tblPosOperatifOzellikleri">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Perop-ErkenKomp]" Member="Perop_ErkenKomp" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Dren" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PostopAnaliz" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Sonda" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="HospSuresi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PreopKreatin" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="PostopKreatin" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="PreopHCT" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="PostopHCT" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="PreopHB" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="PostopHB" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="Takip" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PostopGecKomp" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="KompClavien" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="tblHastaBilgileri_tblPosOperatifOzellikleri" Member="tblHastaBilgileri" ThisKey="HastaID" OtherKey="ID" Type="tblHastaBilgileri" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

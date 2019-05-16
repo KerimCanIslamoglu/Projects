@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CourseApp304.Models.Student>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="m-4">
+    <div class="bg-success text-white p-4">Student List</div>
+    <div class="m-4">
+        <table id="table_id" class="display table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th colspan="3">Student Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td>@student.Name</td>
+                        @if (student.Address != null)
+                        {
+                            <td>@student.Address.Address</td>
+                            <td>@student.Address.City</td>
+                            <td>@student.Address.Country</td>
+                        }
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@student.Id" class="btn btn-primary">EDIT</a>
+                            <a asp-action="Delete" asp-route-id="@student.Id" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a asp-action="Create" class="btn btn-primary">Create</a>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#table_id').DataTable();
+    });
+</script>
+

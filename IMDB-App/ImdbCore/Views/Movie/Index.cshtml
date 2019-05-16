@@ -1,0 +1,30 @@
+﻿@model ImdbCore.Models.Movie
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Movie</h2>
+        <div class="mt-4">
+            <div class="card">
+                <div class="row no-gutter">
+                    <div class="col-md-3">
+                        <img src="@Model.Poster" alt="@Model.Title" class="card-img" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a asp-action="Details" asp-controller="Movie" asp-route-id="@Model.Id">@Model.Title</a>
+                            </h5>
+                            <p class="card-text"><b>Imdb Rating :</b>@Model.imdbRating</p>
+                            <p class="card-text"><b>Written by :</b>@Model.Writer</p>
+                            <p class="card-text"><b>Actors :</b>@Model.Actors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

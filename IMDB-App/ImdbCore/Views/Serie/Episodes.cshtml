@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ImdbCore.Models.Episodes>
+@{
+    ViewData["Title"] = "Episodes";
+}
+
+<h2>Episodes</h2>
+
+@foreach (var item in Model)
+{
+    <div class="mt-4">
+        <div class="card">
+            <div class="row no-gutter">
+                <div class="col-md-3">
+                    <img src="@item.Poster" alt="@item.Title" class="card-img" />
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a asp-action="Details" asp-controller="Serie" asp-route-id="@item.Id">@item.Title</a>
+                        </h5>
+                        <p class="card-text"><b>Season :</b>@item.Season</p>
+                        <p class="card-text"><b>Episode :</b>@item.Episode</p>
+                        <p class="card-text"><b>Released :</b>@item.Released</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,114 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\kerim\\source\\repos\\GotCoreApp\\GotCoreApp\\GotCoreApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\kerim\\source\\repos\\ApiOmdb\\ApiOmdb\\ApiOmdb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kerim\\source\\repos\\ApiOmdb\\ApiOmdb\\ApiOmdb.csproj",
+        "projectName": "ApiOmdb",
+        "projectPath": "C:\\Users\\kerim\\source\\repos\\ApiOmdb\\ApiOmdb\\ApiOmdb.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    },
+    "C:\\Users\\kerim\\source\\repos\\GotCoreApp\\GotCoreApp\\GotCoreApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kerim\\source\\repos\\GotCoreApp\\GotCoreApp\\GotCoreApp.csproj",
+        "projectName": "GotCoreApp",
+        "projectPath": "C:\\Users\\kerim\\source\\repos\\GotCoreApp\\GotCoreApp\\GotCoreApp.csproj",
+        "packagesPath": "C:\\Users\\kerim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kerim\\source\\repos\\GotCoreApp\\GotCoreApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\kerim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\kerim\\source\\repos\\ApiOmdb\\ApiOmdb\\ApiOmdb.csproj": {
+                "projectPath": "C:\\Users\\kerim\\source\\repos\\ApiOmdb\\ApiOmdb\\ApiOmdb.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "EntityFramework.SqlServerCompact": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[3.2.7, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "PagedList": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "PagedList.Mvc": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of Thrones</title>
+
+    <link href="~/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-image: url(https://wallpapercave.com/wp/wp2084488.jpg);
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body >
+
+    <header>
+
+        <div class="navbar navbar-expand-sm bg-primary navbar-dark">
+            <div class="container">
+                <a href="/" class="navbar-brand">Game of Thrones App</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Episodes</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="container mt-4">
+            @RenderBody()
+        </div>
+    </main>
+    <footer>
+
+        <div class="footer py-3 mt-3">
+            <div class="container">
+                <span class="text-muted">Copyright Kerim</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/vendor/jquery/dist/jquery.min.js"></script>
+
+</body>
+</html>

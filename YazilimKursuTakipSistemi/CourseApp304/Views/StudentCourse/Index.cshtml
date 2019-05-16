@@ -1,0 +1,70 @@
+﻿@model StudentCourseModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="m-4">
+    <div class="bg-success text-white p-4">
+        Student & Courses
+    </div>
+    <h3>Courses</h3>
+    <table class="table table-striped table-hover table-bordered table-sm">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Courses?.Count() > 0)
+            {
+                foreach (var item in Model.Courses)
+                {
+                    <tr>
+                        <td>@item.CourseName</td>
+                        <td>@item.Price</td>
+                        <td></td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3">No Courses</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <h3>Student</h3>
+    <table class="table table-striped table-hover table-bordered table-sm">
+        <thead>
+            <tr>
+                <th>Name</th>               
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Students?.Count() > 0)
+            {
+                foreach (var item in Model.Students)
+                {
+                    <tr>
+                        <td>@item.Name</td>                      
+                        <td></td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="2" class="text-center">No Students</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+

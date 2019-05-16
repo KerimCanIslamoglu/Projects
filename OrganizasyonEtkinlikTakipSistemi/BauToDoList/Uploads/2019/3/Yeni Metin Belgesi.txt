@@ -1,0 +1,81 @@
+ void HastaListAc(int id)
+        {
+            try
+            {
+                edit = true;
+                _hastaID = id;
+                _demoID = id;
+                _ooID = id;
+                _pooID = id;
+                _patoID = id;
+                _takipID = id;
+                tblHastaBilgileri hb = _db.tblHastaBilgileris.First(x => x.ID == _hastaID);
+                txtHAdi.Text = hb.HastaAdi;
+                txtHSoyadi.Text = hb.HastaSoyadi;
+                txtProNo.Text = hb.ProtokolNo;
+                dtpOpTarih.Text = hb.OperasyonTarihi.ToString();
+                txtTakipSuresi.Text = hb.TakipSuresi_Ay_.ToString();
+                txtAnah.Text = hb.Anah.ToString();
+                txtOperasyonTur.Text = hb.OperasyonTuru;
+
+                tblDemografik dmg = _db.tblDemografiks.First(x => x.HastaID == _demoID);
+                txtYas.Text = dmg.Yas.ToString();
+                txtBoy.Text = dmg.Boy_cm_.ToString();
+                txtKilo.Text = dmg.Kilo_kg_.ToString();
+                txtBMI.Text = dmg.BMI.ToString();
+                cbAsa.Text = dmg.ASA.ToString();
+                cbCins.Text = dmg.CINS;
+                cbTaraf.Text = dmg.Taraf;
+                txtLokalizasyon.Text = dmg.Lokalizasyon;
+                txtBoyut.Text = dmg.Boyut.ToString();
+                txtKOMorb.Text = dmg.KOMorbidite;
+                txtDrAdi.Text = dmg.DrAdi;
+
+                tblOperatifOzellikler opo = _db.tblOperatifOzelliklers.First(x => x.HastaID == _ooID);
+                cbPKSAciklama.Text = opo.PKSAciklama;
+                cbSik.Text = opo.SIK;
+                txtCoOp.Text = opo.COOperasyon;
+                txtIskemi.Text = opo.Iskemi.ToString();
+                cbPortSayisi.Text = opo.PortSayisi.ToString();
+                txtYardimYNT.Text = opo.YardimYNT;
+                txtSure.Text = opo.Sure.ToString();
+                txtDren.Text = opo.Dren.ToString();
+                txtKanama.Text = opo.Kanama.ToString();
+                txtPiyes.Text = opo.Piyes.ToString();
+
+                tblPosOperatifOzellikleri poo = _db.tblPosOperatifOzellikleris.First(x => x.HastaID == _pooID);
+                cbPeropErken.Text = poo.Perop_ErkenKomp;
+                txtPOSTOPAnaliz.Text = poo.PostopAnaliz;
+                cbSonda.Text = poo.Sonda;
+                txtHospSure.Text = poo.HospSuresi.ToString();
+                txtPreOpKrea.Text = poo.PreopKreatin.ToString();
+                txtPostopKrea.Text = poo.PostopKreatin.ToString();
+                txtPreopHCT.Text = poo.PreopHCT.ToString();
+                txtPostopHCT.Text = poo.PostopHCT.ToString();
+                txtPreopHB.Text = poo.PreopHB.ToString();
+                txtPostopHB.Text = poo.PostopHB.ToString();
+                txtTakip.Text = poo.Takip;
+                txtTel.Text = poo.Tel;
+                txtPostopGecKomp.Text = poo.PostopGecKomp;
+                cbKompClavien.Text = poo.KompClavien;
+
+                tblPatolojikVeriler pv = _db.tblPatolojikVerilers.First(x => x.HastaID == _patoID);
+                cbFurhman.Text = pv.FurhmanGrade;
+                cbPatolojikEvre.Text = pv.PatolojikEvre;
+                cbCerrahiSinir.Text = pv.CerrahiSinir;
+                cbAltGrup.Text = pv.AltGrup;
+                cbPatoloji.Text = pv.Patoloji;
+
+                tblTakipVerileri tv = _db.tblTakipVerileris.First(x => x.HastaID == _takipID);
+                cb3AyNuks.Text = tv.Postop3AyLokalNuks;
+                txt3AyKreatin.Text = tv.Postop3AyKreatin.ToString();
+                cb6AyNuks.Text = tv.Postop6AyLokalNuks;
+                txt6AyKreatin.Text = tv.Postop6AyKreatin.ToString();
+                cb12AyNuks.Text = tv.Postop12AyLokalNuks;
+                txt12AyKreatin.Text = tv.Postop12AyKreatin.ToString();
+            }
+            catch (Exception e)
+            {
+                _m.Hata(e);
+            }
+        }

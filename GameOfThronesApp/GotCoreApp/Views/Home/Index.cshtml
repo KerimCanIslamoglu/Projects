@@ -1,0 +1,59 @@
+﻿
+@model ReflectionIT.Mvc.Paging.PagingList<GotCoreApp.Models.Bolumlers>
+@using ReflectionIT.Mvc.Paging;
+@addTagHelper *, ReflectionIT.Mvc.Paging
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-white">
+            Episodes
+        </h2>
+
+        <nav aria-label="EpisodesNavigation">
+            @Html.Partial("Pager", this.Model)
+        </nav>
+
+        <form method="get" class="form-inline">
+            <input style="width:250px;" name="filter" class="form-control" placeholder="Title, Released Date,Season"
+                   value="@Model.RouteValue["Filter"]" />
+            <button type="submit" class="btn btn-info">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
+            </button>
+        </form>
+
+        @foreach (var item in Model)
+        {
+            <div class="mt-4">
+                <div class="card">
+                    <div class="row no-gutter">
+                        <div class="col-md-3">
+                            <img src="@item.Poster" alt="@item.Title" class="card-img" />
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">@item.Title</a>
+                                </h5>
+                                <p class="card-text"><b>Season :</b>@item.Season</p>
+                                <p class="card-text"><b>Episode :</b>@item.Episode</p>
+                                <p class="card-text"><b>Released :</b>@item.Released</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="mt-4">
+            <nav aria-label="EpisodesNavigation">
+
+                @Html.Partial("Pager", this.Model)
+            </nav>
+        </div>
+
+    </div>
+</div>
+
